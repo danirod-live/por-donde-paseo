@@ -1,38 +1,115 @@
-.App {
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+}
+
+#mapArea {
+  background: green;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#toolbar {
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#toolbar button {
+  padding: 8px 16px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid black;
+  border-bottom-width: 3px;
+  box-shadow: 0 0 2px black;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#mark-home.active {
+  background: lime;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#banner {
+  font-size: 16pt;
+  z-index: 2;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  position: absolute;
+  color: white;
+  max-width: 50%;
+  padding: 10px 20px;
+  line-height: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#banner p {
+  margin: 0;
+  padding: 0;
+}
+
+.leafmap {
+  height: 100%;
+}
+
+#alert-base {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  opacity: 0.5;
+}
+
+#alert-notice {
+  position: absolute;
+  z-index: 4;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  background: white;
+  padding: 10px;
+  font-size: 10pt;
+  line-height: 1.5;
+  border: 1px solid black;
+  border-bottom-width: 3px;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+@media screen and (min-width: 768px) {
+  #alert-notice {
+    left: 50%;
+    top: 30px;
+    bottom: auto;
+    right: auto;
+    max-width: 640px;
+    transform: translateX(-320px);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 768px) and (min-height: 768px) {
+  #alert-notice {
+    top: 150px;
   }
+}
+
+.continue {
+  text-align: center;
+}
+
+.continue button {
+  font-weight: bold;
+  font-size: 18pt;
 }
