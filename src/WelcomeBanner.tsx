@@ -31,7 +31,8 @@ const WelcomeBanner: React.FunctionComponent<WelcomeBannerProps> = ({ onDone }) 
 
     <p className="continue"><button onClick={onDone}>Continuar</button></p>
 
-      <p><a href="https://github.com/danirod/por-donde-paseo" target="_blank">GitHub (issues, PRs, stars)</a> ·
+    <p>¿Encontraste un problema? ¿Tienes comentarios? Repórtamelo para que lo pueda arreglar:
+      <a href="https://github.com/danirod/por-donde-paseo" target="_blank">GitHub (issues, PRs, stars)</a> ·
         <a href="https://twitter.com/danirod93" target="_blank">Twitter</a></p>
   </div>
   </div>
